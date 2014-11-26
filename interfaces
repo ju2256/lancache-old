@@ -20,5 +20,8 @@ address 192.168.1.101
 netmask 255.255.255.0
 gateway 192.168.1.1
 
-contenu /etc/hosts
+# contenu /etc/hosts
 192.168.1.101 lancache-steam
+
+# changement proprietaire /srv/www
+chown -R www-data:www-data /srv/www
