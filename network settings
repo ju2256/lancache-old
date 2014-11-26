@@ -58,3 +58,6 @@ gateway 192.168.1.1
 
 # changement proprietaire /srv/www
 chown -R www-data:www-data /srv/www
+
+# visualiser le traffic
+nload -U G - u M -i 102400 -o 102400
