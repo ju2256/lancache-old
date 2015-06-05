@@ -8,53 +8,27 @@ iface lo inet loopback
 # The primary network interface
 auto eth0
 iface eth0 inet static
-address 192.168.1.100
-gateway 192.168.1.1
+address 192.168.1.20
+gateway 192.168.1.11
 netmask 255.255.255.0
 
 auto eth0:0
 iface eth0:0 inet static
-address 192.168.1.101
+address 192.168.1.21
 netmask 255.255.255.0
-gateway 192.168.1.1
+gateway 192.168.1.11
 
 auto eth0:1
 iface eth0:1 inet static
-address 192.168.1.102
+address 192.168.1.22
 netmask 255.255.255.0
-gateway 192.168.1.1
+gateway 192.168.1.11
 
-auto eth0:2
-iface eth0:2 inet static
-address 192.168.1.103
-netmask 255.255.255.0
-gateway 192.168.1.1
-
-auto eth0:3
-iface eth0:3 inet static
-address 192.168.1.104
-netmask 255.255.255.0
-gateway 192.168.1.1
-
-auto eth0:4
-iface eth0:4 inet static
-address 192.168.1.105
-netmask 255.255.255.0
-gateway 192.168.1.1
-
-auto eth0:5
-iface eth0:5 inet static
-address 192.168.1.106
-netmask 255.255.255.0
-gateway 192.168.1.1
 
 # contenu /etc/hosts
-192.168.1.101 lancache-steam
-192.168.1.102 lancache-riot
-192.168.1.103 lancache-blizzard
-192.168.1.104 lancache-hirez
-192.168.1.105 lancache-origin
-192.168.1.106 lancache-sony
+192.168.1.20 lancache
+192.168.1.21 lancache-steam
+192.168.1.22 lancache-riot
 
 # changement proprietaire /srv/www
 chown -R www-data:www-data /srv/www
