@@ -30,5 +30,11 @@ gateway 192.168.1.11
 # changement proprietaire /srv/www
 chown -R www-data:www-data /srv/www
 
+# liens symboliques Nginx
+cd /etc/nginx
+mv nginx.conf nginx.conf.ori
+ln -s /machines/lancache-single.conf nginx.conf
+ln -s /sites/lancache-single.conf /vhosts/lancache-single.conf
+
 # visualiser le traffic
 nload -U G - u M -i 102400 -o 102400
